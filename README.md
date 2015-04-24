@@ -1,7 +1,7 @@
 # minirpc
 This is mini rpc depend on google protobuf.
 #1. build
-##build gtest/protobuf source code for unittest.
+##1.1. build gtest/protobuf source code for unittest.
 ###cd minirpc/tools
 ###unzip gtest-1.7.0.zip
 ###cd gtest-1.7.0
@@ -14,9 +14,9 @@ This is mini rpc depend on google protobuf.
 ###./configure --prefix=`pwd`/inbin
 ###make ; make install
 
-##2. build common , client, and agent directory code.
-###cd common
-###make clean; make
+##1.2. build common , client, and agent directory code.
+###   cd common
+###   make clean; make
 ###cd ../client
 ###make clean ; make
 ###cd ../agent
