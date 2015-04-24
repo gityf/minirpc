@@ -8,17 +8,17 @@ This is mini rpc depend on google protobuf.
 ###./configure
 ###make
 
-# build protobuf source code.
-cd ..
-tar -xvf protobuf-2.6.1.tar.gz
-cd protobuf-2.6.1
-./configure --prefix=`pwd`/inbin
-make ; make install
+## build protobuf source code.
+###cd ..
+###tar -xvf protobuf-2.6.1.tar.gz
+###cd protobuf-2.6.1
+###./configure --prefix=`pwd`/inbin
+###make ; make install
 
-2. build common , client, and agent directory code.
-cd common
-make clean; make
-cd ../client
-make clean ; make
-cd ../agent
-make clean; make
+##2. build common , client, and agent directory code.
+###cd common
+###make clean; make
+###cd ../client
+###make clean ; make
+###cd ../agent
+###make clean; make
