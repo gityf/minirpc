@@ -1,12 +1,12 @@
 # minirpc
 This is mini rpc depend on google protobuf.
-1. build
-#build gtest source code for unittest.
-cd minirpc/tools
-unzip gtest-1.7.0.zip
-cd gtest-1.7.0
-./configure
-make
+#1. build
+##build gtest source code for unittest.
+###cd minirpc/tools
+###unzip gtest-1.7.0.zip
+###cd gtest-1.7.0
+###./configure
+###make
 
 # build protobuf source code.
 cd ..
