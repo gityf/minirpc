@@ -1,14 +1,13 @@
 # minirpc
 This is mini rpc depend on google protobuf.
 #1. build
-##build gtest source code for unittest.
+##build gtest/protobuf source code for unittest.
 ###cd minirpc/tools
 ###unzip gtest-1.7.0.zip
 ###cd gtest-1.7.0
 ###./configure
 ###make
 
-## build protobuf source code.
 ###cd ..
 ###tar -xvf protobuf-2.6.1.tar.gz
 ###cd protobuf-2.6.1
@@ -22,3 +21,7 @@ This is mini rpc depend on google protobuf.
 ###make clean ; make
 ###cd ../agent
 ###make clean; make
+
+#some code in this project is just copy from other open source code project as below.
+##haproxy cxxtools thrift protobuf kamailio sems fastrpc redis putty.
+##thanks for every open source project the above.
