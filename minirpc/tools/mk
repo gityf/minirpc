@@ -1,0 +1,12 @@
+#!/bin/bash
+
+unzip gtest-1.7.0.zip
+cd gtest-1.7.0
+./configure
+make
+
+cd ..
+tar -xvf protobuf-2.6.1.tar.gz
+cd protobuf-2.6.1
+./configure --prefix=`pwd`/inbin
+make ; make install

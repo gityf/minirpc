@@ -1,0 +1,32 @@
+#CFLAGS = -DDEBUG_LOG -D_DEBUG -D_POSIX_PTHREAD_SEMANTICS -D_REENTRANT
+CFLAGS = -DDEBUG_LOG -D_POSIX_PTHREAD_SEMANTICS -D_REENTRANT
+CFLAGS = -D_POSIX_PTHREAD_SEMANTICS -D_REENTRANT
+CC=gcc -g -O3 $(CFLAGS) -DSunOS
+ostype=$(shell uname -s)
+
+ifeq (${ostype}, AIX)
+	CC=xlC -g -O3 -DAIX $(CFLAGS)
+	SHARED_FLAG = -G -brtl
+endif
+
+ifeq (${ostype}, Linux)
+	CC=gcc -g -O3 $(CFLAGS) -DLINUX
+	SHARED_FLAG = -fPIC -shared
+endif
+
+ifeq (${ostype}, HP-UX)
+	CC=aCC +Z -Wl,+s +u4 -ext -mt -w -AA +z -O +W67,829,749 -DHPUX -D_GNUC_STL_ -D_LARGEFILE64_SOURCE -D_THREAD_SAFE $(CFLAGS)
+	SHARED_FLAG = -b -Wl,+s
+endif
+
+ifeq (${ostype}, SunOS)
+	CC=gcc -g -O3 $(CFLAGS) -DSunOS
+	SHARED_FLAG = -G
+endif
+
+%.o : %.cpp
+	$(CC) $(SHARED_FLAG) -c $< $(INC)
+%.o : %.c
+	$(CC) $(SHARED_FLAG) -c $< $(INC)
+%.o : %.cc
+	$(CC) $(SHARED_FLAG) -c $< $(INC)

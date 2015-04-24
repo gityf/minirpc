@@ -1,0 +1,19 @@
+package basic;
+
+message LibLoadRequest
+{
+  required string library = 1;
+};
+
+message LibLoadResponse
+{
+  required string loadresult = 1;
+};
+
+service LibLoadService
+{
+  rpc Load(LibLoadRequest) returns (LibLoadResponse);
+  rpc UnLoad(LibLoadRequest) returns (LibLoadResponse);
+};
+
+option cc_generic_services = true;
