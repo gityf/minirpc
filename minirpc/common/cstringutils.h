@@ -104,7 +104,7 @@ namespace wyf {
         template <class Type>
         static Type stringToNum(const std::string& str)
         {
-            istringstream iss(str);
+            std::istringstream iss(str);
             Type num;
             iss >> num;
             return num;
