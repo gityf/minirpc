@@ -14,6 +14,8 @@ This is mini rpc depend on google protobuf.
 ###./configure --prefix=`pwd`/inbin
 ###make ; make install
 
+cstringutils.h
+line 107: istringstream iss(str); --> std::istringstream iss(str);
 ##1.2. build common , client, and agent directory code.
 ###   cd common
 ###   make clean; make
