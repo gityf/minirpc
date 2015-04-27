@@ -6,7 +6,7 @@
 **Description: source file of serialize ut.
 */
 #include <iostream>
-#include <strstream>
+#include <sstream>
 #include "common/serialize.h"
 #include "common/cstringutils.h"
 #include "gtest/gtest.h"
@@ -60,14 +60,14 @@ TEST(SerializeTest, SerializeA)
     tt.iDouble = 6.876;
     tt.iLong = 987654321L;
     tt.iStr = "This is serialize string.";
-    ostrstream ostr;
+    ostringstream ostr;
     try {
     tt.Serialize(ostr);
     cout << "Serialize:>>" << wyf::CStrUitls::HexFormatStr(ostr.str()) << endl;
     tt.DumpMember();
     string rstr = ostr.str();
 
-    istrstream istr(rstr.c_str(), rstr.length());
+    istringstream istr(rstr;
     dd.Deserialize(istr);
     cout << "Deserialize:>>" << wyf::CStrUitls::HexFormatStr(istr.str()) << endl;
     dd.DumpMember();
