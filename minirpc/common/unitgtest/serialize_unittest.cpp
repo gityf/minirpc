@@ -62,15 +62,15 @@ TEST(SerializeTest, SerializeA)
     tt.iStr = "This is serialize string.";
     ostringstream ostr;
     try {
-    tt.Serialize(ostr);
-    cout << "Serialize:>>" << wyf::CStrUitls::HexFormatStr(ostr.str()) << endl;
-    tt.DumpMember();
-    string rstr = ostr.str();
+        tt.Serialize(ostr);
+        cout << "Serialize:>>" << wyf::CStrUitls::HexFormatStr(ostr.str()) << endl;
+        tt.DumpMember();
+        string rstr = ostr.str();
 
-    istringstream istr(rstr;
-    dd.Deserialize(istr);
-    cout << "Deserialize:>>" << wyf::CStrUitls::HexFormatStr(istr.str()) << endl;
-    dd.DumpMember();
+        istringstream istr(rstr;
+        dd.Deserialize(istr);
+        cout << "Deserialize:>>" << wyf::CStrUitls::HexFormatStr(istr.str()) << endl;
+        dd.DumpMember();
     } catch (string &e) {
         cout << "ERROR:" << e << endl;
     }
