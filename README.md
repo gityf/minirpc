@@ -21,7 +21,3 @@ This is mini rpc depend on google protobuf.
 ###make clean ; make
 ###cd ../agent
 ###make clean; make
-
-#some code in this project is just copy from other open source code project as below.
-##haproxy cxxtools thrift protobuf kamailio sems fastrpc redis putty.
-##thanks for every open source project the above.
