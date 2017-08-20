@@ -1,6 +1,7 @@
 # Minirpc
   This is mini rpc depend on google protobuf.
-
+## Data flow
+![auth flow icon](https://github.com/gityf/minirpc/blob/master/minirpc/doc/minirpc-flow.png)
 ## Intalling
   build gtest/protobuf source code for unittest.
 ```bash
