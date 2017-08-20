@@ -2,6 +2,10 @@
   This is mini rpc depend on google protobuf.
 ## Data flow
 ![auth flow icon](https://github.com/gityf/minirpc/blob/master/minirpc/doc/minirpc-flow.png)
+## Agent display service stat list
+![auth flow icon](https://github.com/gityf/minirpc/blob/master/minirpc/doc/agent_service_display_page.png)
+## Agent display service list.
+![auth flow icon](https://github.com/gityf/minirpc/blob/master/minirpc/doc/minirpc-agent.png)
 ## Intalling
   build gtest/protobuf source code for unittest.
 ```bash
