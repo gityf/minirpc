@@ -1,5 +1,13 @@
 # Minirpc
   This is mini rpc depend on google protobuf.
+```
+  minirpc 是基于 protobuf 的分布式 RPC 系统。
+
+1. rpc server端提供的service可以是so库文件方式存在，可以使用libloader工具增加到server上。
+2. rpc server会将自己所提供的服务注册到agent上。
+3. agent服务中心采用去中心化的方式运行，通过加入组播实现rpc server的服务列表管理和运行状态的准实时展现。
+4. rpc client可以使用需要调用的server名称（字符串服务名），向agent中心获取提供此类服务的rpc server，之后连接rpc server实现数据传输和业务处理。
+```
 ## Data flow
 ![auth flow icon](https://github.com/gityf/minirpc/blob/master/minirpc/doc/minirpc-flow.png)
 ## Agent display service stat list
