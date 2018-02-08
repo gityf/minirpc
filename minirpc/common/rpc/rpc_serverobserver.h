@@ -27,8 +27,8 @@ using std::string;
 
 class CRpcSerObserver {
  public:
-     CRpcSerObserver() {}
-     ~CRpcSerObserver() {}
+    CRpcSerObserver() {}
+    virtual ~CRpcSerObserver() {}
     // rpc request.
     virtual int RpcRequest(int aSockId, const string& aMethod,
                            const char* aRequBuf, int aRequLen) = 0;
