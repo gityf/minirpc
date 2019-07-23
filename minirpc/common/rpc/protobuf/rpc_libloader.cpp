@@ -93,7 +93,7 @@ int main(int argc, char *argv[]) {
     int t = 5;
     do {
         sleep(1);
-        std::cout << "It will exit at " << t << " seconds.\n";
+        std::cout << "It will exit at " << t << " seconds later.\n";
     } while(t-- > 0);
     delete client;
     delete libloadstub;
