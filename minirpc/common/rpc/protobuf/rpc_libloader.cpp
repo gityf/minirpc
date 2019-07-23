@@ -47,10 +47,10 @@ public:
 
 int main(int argc, char *argv[]) {
     if (argc < 4) {
-        std::cout << "Usage:whichServer whichLibrary...\n";
-        std::cout << "e.g: argv[0]"
+        std::cout << "Usage:whichServer load/unload whichLibrary...\n";
+        std::cout << "e.g: " << argv[0]
                   << " BasicServer load libecho.so\n";
-        std::cout << "e.g: argv[0]"
+        std::cout << "e.g: " << argv[0]
                   << " BasicServer unload libecho.so\n";
         return -1;
     }
