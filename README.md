@@ -77,3 +77,19 @@ int echo_Init(CRpcSerObserver* aRpcServer) {
 }
 
 ```
+
+### Where is example
+    location: minirpc/common/rpc/protobuf
+    echo.proto is proto IDL file.
+    to run 
+```bash
+ protoc --cpp_out=. ./echo.proto
+``` 
+    then
+
+    echo.pn.h and echo.pb.cc will be created by protoc command.
+
+#### rpc_server_basic.cpp is rpc-server source code demo file.
+#### rpc_libloader.cpp is tool for loading so file for rpc_server_basic.
+#### rpc_client_demo.cpp is rpc-client source code demo file.
+
